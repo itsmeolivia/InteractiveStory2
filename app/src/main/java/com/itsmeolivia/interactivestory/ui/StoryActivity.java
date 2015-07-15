@@ -1,10 +1,11 @@
-package com.itsmeolivia.interactivestory;
+package com.itsmeolivia.interactivestory.ui;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
+
+import com.itsmeolivia.interactivestory.R;
+import com.itsmeolivia.interactivestory.model.Page;
 
 public class StoryActivity extends ActionBarActivity {
 
@@ -16,7 +17,11 @@ public class StoryActivity extends ActionBarActivity {
         setContentView(R.layout.activity_story);
 
         Intent intent = getIntent();
-        String name = intent.getStringExtra("name");
+        String name = intent.getStringExtra(getString(R.string.key_name));
+
+        if (name == null) {
+            name = "Friend";
+        }
     }
 
 

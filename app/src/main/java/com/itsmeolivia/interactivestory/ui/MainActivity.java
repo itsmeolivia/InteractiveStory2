@@ -1,13 +1,13 @@
-package com.itsmeolivia.interactivestory;
+package com.itsmeolivia.interactivestory.ui;
 
 import android.content.Intent;
 import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+
+import com.itsmeolivia.interactivestory.R;
 
 public class MainActivity extends ActionBarActivity {
 
@@ -33,7 +33,7 @@ public class MainActivity extends ActionBarActivity {
 
     private void startStory(String name) {
         Intent intent = new Intent(this, StoryActivity.class);
-        intent.putExtra("name", name);
+        intent.putExtra(getString(R.string.key_name), name);
         startActivity(intent);
 
     }
