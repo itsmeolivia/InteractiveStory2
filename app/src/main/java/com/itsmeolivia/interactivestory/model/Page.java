@@ -18,6 +18,7 @@ public class Page {
         mImageId = id;
         mText = text;
         mChoice1 = one;
+        mChoice2 = two;
 
     }
 
